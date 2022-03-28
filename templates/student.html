@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>api</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <h2> Student Details Are:</h2>
+        {% if student %}
+            {% for stu in student %}
+                <ol>
+                <li>Student Rall No:{{ stu.student_all }}</li>
+                <li>Student Name:{{ stu.student_name }}</li>
+                <li>Student classnName:{{ stu.student_class }}</li>
+                <li>Student class Name:{{ stu.student_section}}</li>
+                <li>Student Marks:{{ stu.student_marks}}</li>
+                </ol>
+            {% endfor %}
+        </div>
+        {% else %}
+            <h2>No Student Available</h2>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
